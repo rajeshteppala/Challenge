@@ -20,7 +20,7 @@ public class TODO {
 
     @Given("I am navigated to  TODO application page")
     public void todoApplicationPage() {
-        System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "/src/test/java/driver/chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "/src/test/java/driver/chromedriver");
         driver = new ChromeDriver();
         System.out.println("open application page");
         driver.navigate().to("https://todomvc.com/examples/vue/");
