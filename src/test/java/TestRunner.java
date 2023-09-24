@@ -1,6 +1,9 @@
 import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
+import org.junit.After;
+import org.junit.Before;
 import org.junit.runner.RunWith;
+import utils.BaseClass;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
@@ -12,7 +15,20 @@ import org.junit.runner.RunWith;
                 "junit:output/JUNIT/report.xml",
                 "json:output/JSON/report.json"
         },
-        tags = "@add or @validateActiveSection or @ValidateCompletedSection or @completeTheTask or @clearTheTask or @addMultipleTask"
+        tags = "@createAndScheduleTask"
 )
 public class TestRunner {
+
+        @Before
+        public void setUp() {
+                BaseClass baseTest = new BaseClass();
+                baseTest.initialBrowserSetUp();
+        }
+
+        @After
+        public void tearDown() {
+                BaseClass baseTest = new BaseClass();
+                baseTest.tearDown();
+        }
+
 }
