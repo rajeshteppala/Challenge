@@ -11,7 +11,7 @@ import pagefactory.HomePage;
 import pagefactory.LoginPage;
 import pagefactory.OpenTasksPage;
 import pagefactory.SchedulingTaskPage;
-import utils.BaseClass;
+
 import java.time.Duration;
 
 public class SchedulingTask{

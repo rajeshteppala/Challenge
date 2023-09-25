@@ -1,8 +1,9 @@
-package utils;
+package stepdefinitions;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import utils.ReadPropertyFile;
 import webActions.Actions;
 import webActions.WebActions;
 
