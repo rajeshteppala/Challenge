@@ -1,9 +1,24 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="0.221">
-<testcase classname="Manage the TODO list" name="Add new task in TODO list" time="0.042">
-<system-out><![CDATA[Given User is on the TODO application page..................................passed
-When User adds new task.....................................................passed
-Then New task is added to TODO list.........................................passed
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Cucumber" time="166.311" tests="1" skipped="0" failures="0" errors="0">
+<testcase classname="Task scheduling" name="Create and schedule a task" time="166.052">
+<system-out><![CDATA[
+Given User navigates to the application.....................................passed
+When User enters the username...............................................passed
+And User enters the password................................................passed
+And Clicks on the login button..............................................passed
+When User navigates to the application dashboard............................passed
+And User clicks on add button...............................................passed
+And User enters the title 'Automation scheduling task'......................passed
+And User clicks on create task button.......................................passed
+And User clicks on the no schedule option...................................passed
+And User selects the start date '26'........................................passed
+And user Selects the end date '30'..........................................passed
+And User clicks on close button.............................................passed
+And User clicks on record option............................................passed
+And User clicks on quick records option.....................................passed
+And User clicks on open all task option.....................................passed
+Then User clicks on existing task 'Automation scheduling task'..............passed
+And Verify the scheduled date range is from '26' to '30'....................passed
 ]]></system-out>
 </testcase>
 </testsuite>
