@@ -1,6 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Cucumber" time="166.311" tests="1" skipped="0" failures="0" errors="0">
-<testcase classname="Task scheduling" name="Create and schedule a task" time="166.052">
+<testsuite name="Cucumber" time="124.367" tests="1" skipped="0" failures="1" errors="0">
+<testcase classname="Task scheduling" name="Create and schedule a task" time="123.995">
+<failure type="org.openqa.selenium.ElementClickInterceptedException" message="element click intercepted: Element &lt;div class=&quot;kr-text&quot; style=&quot;font-size: 13px; font-weight: 400; line-height: 18px; letter-spacing: normal; color: rgb(138, 148, 153); white-space: nowrap; overflow: hidden; text-overflow: ellipsis;&quot;&gt;...&lt;/div&gt; is not clickable at point (1066, 585). Other element would receive the click: &lt;div class=&quot;kr-view&quot; style=&quot;flex-grow: 1; flex-direction: column; user-select: none;&quot;&gt;...&lt;/div&gt;
+  (Session info: chrome=117.0.5938.92)
+Build info: version: '4.12.0', revision: '249f2a7d1b*'
+System info: os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '11.4', java.version: '11.0.12'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [a7f4f9ac452df5480ed33d2944a8a4c8, clickElement {id=62C4BD8C1C938AE253FEBCEA645D55B3_element_39}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 117.0.5938.92, chrome: {chromedriverVersion: 117.0.5938.92 (67649b10b92b..., userDataDir: /var/folders/d6/53pt1jwj2q5...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:49563}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:49563/devtoo..., se:cdpVersion: 117.0.5938.92, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on mac (a7f4f9ac452df5480ed33d2944a8a4c8)] -&gt; xpath: //*[@class='kr-text' and contains(text(),'26')]]
+Session ID: a7f4f9ac452df5480ed33d2944a8a4c8">
+<![CDATA[org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <div class="kr-text" style="font-size: 13px; font-weight: 400; line-height: 18px; letter-spacing: normal; color: rgb(138, 148, 153); white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">...</div> is not clickable at point (1066, 585). Other element would receive the click: <div class="kr-view" style="flex-grow: 1; flex-direction: column; user-select: none;">...</div>
+  (Session info: chrome=117.0.5938.92)
+Build info: version: '4.12.0', revision: '249f2a7d1b*'
+System info: os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '11.4', java.version: '11.0.12'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [a7f4f9ac452df5480ed33d2944a8a4c8, clickElement {id=62C4BD8C1C938AE253FEBCEA645D55B3_element_39}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 117.0.5938.92, chrome: {chromedriverVersion: 117.0.5938.92 (67649b10b92b..., userDataDir: /var/folders/d6/53pt1jwj2q5...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:49563}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:49563/devtoo..., se:cdpVersion: 117.0.5938.92, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on mac (a7f4f9ac452df5480ed33d2944a8a4c8)] -> xpath: //*[@class='kr-text' and contains(text(),'26')]]
+Session ID: a7f4f9ac452df5480ed33d2944a8a4c8
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:224)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:77)
+	at webActions.Actions.click(Actions.java:37)
+	at pagefactory.SchedulingTaskPage.selectSchedulingDate(SchedulingTaskPage.java:60)
+	at stepdefinitions.SchedulingTask.selectTheStartDate(SchedulingTask.java:86)
+	at ✽.User selects the start date '26'(file:///Users/macbookpro/Desktop/challenge/Task2/src/test/resources/Features/schedulingTask.feature:20)
+]]>
+</failure>
 <system-out><![CDATA[
 Given User navigates to the application.....................................passed
 When User enters the username...............................................passed
@@ -11,14 +48,14 @@ And User clicks on add button...............................................pass
 And User enters the title 'Automation scheduling task'......................passed
 And User clicks on create task button.......................................passed
 And User clicks on the no schedule option...................................passed
-And User selects the start date '26'........................................passed
-And user Selects the end date '30'..........................................passed
-And User clicks on close button.............................................passed
-And User clicks on record option............................................passed
-And User clicks on quick records option.....................................passed
-And User clicks on open all task option.....................................passed
-Then User clicks on existing task 'Automation scheduling task'..............passed
-And Verify the scheduled date range is from '26' to '30'....................passed
+And User selects the start date '26'........................................failed
+And user Selects the end date '30'..........................................skipped
+And User clicks on close button.............................................skipped
+And User clicks on record option............................................skipped
+And User clicks on quick records option.....................................skipped
+And User clicks on open all task option.....................................skipped
+Then User clicks on existing task 'Automation scheduling task'..............skipped
+And Verify the scheduled date range is from '26' to '30'....................skipped
 ]]></system-out>
 </testcase>
 </testsuite>

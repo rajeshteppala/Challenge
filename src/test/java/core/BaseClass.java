@@ -10,9 +10,9 @@ import webActions.WebActions;
 public class BaseClass{
 
     ReadPropertyFile readConfig = new ReadPropertyFile();
-    public String baseURL = readConfig.baseURL;
-    public String userName = readConfig.userName;
-    public String password = readConfig.password;
+    public String baseURL = readConfig.getConfigData("baseUrl");
+    public String userName = readConfig.getApplicationData("userName");
+    public String password = readConfig.getApplicationData("password");
     public WebDriver  driver;
     public WebActions actions = new Actions();
 

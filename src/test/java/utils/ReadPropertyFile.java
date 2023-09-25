@@ -10,26 +10,16 @@ import java.util.logging.Logger;
 public class ReadPropertyFile {
 
     Logger logger = Logger.getLogger(ReadPropertyFile.class.getName());
-    public String baseURL;
-    public String userName;
-    public String password;
+    Properties testData = loadPropertyFile("./src//test//resources//TestData//testdata.properties");
+    Properties configData = loadPropertyFile("./config//config.properties");
 
-    public ReadPropertyFile() {
+
+    public Properties loadPropertyFile(String propertyFile) {
         Properties properties = new Properties();
         FileInputStream fileInputStream = null;
-
         try {
-            fileInputStream = new FileInputStream("./config//config.properties");
+            fileInputStream = new FileInputStream(propertyFile);
             properties.load(fileInputStream);
-
-            // Get a specific property
-             baseURL = properties.getProperty("baseUrl");
-             userName = properties.getProperty("userName");
-             password = properties.getProperty("password");
-
-            logger.info("The base URL: " + baseURL);
-            logger.info("Login username: " + userName);
-            logger.info("Login password: " + password);
         } catch (IOException e) {
             throw new NoSuchElementException("Issue in reading the value from property file");
         } finally {
@@ -41,5 +31,19 @@ public class ReadPropertyFile {
                 }
             }
         }
+        return properties;
     }
+
+    public String getApplicationData(String variableName) {
+        String value = testData.getProperty(variableName);
+        logger.info("Retrieved value from test data property files " + variableName + " is " + value);
+        return value;
+    }
+
+    public String getConfigData(String variableName) {
+        String value = configData.getProperty(variableName);
+        logger.info("Retrieved value from config property files " + variableName + " is " + value);
+        return value;
+    }
+
 }

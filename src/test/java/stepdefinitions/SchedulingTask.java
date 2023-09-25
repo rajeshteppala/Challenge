@@ -32,6 +32,7 @@ public class SchedulingTask{
     @Given("User navigates to the application")
     public void isLoginScreenDisplayed(){
         loginPage = new LoginPage(driver);
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
         loginPage.isLoginScreenDisplayed();
     }
 
