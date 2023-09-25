@@ -9,8 +9,9 @@ import webActions.WebActions;
 public class BaseClass{
 
     ReadPropertyFile readConfig = new ReadPropertyFile();
-    public String baseURL = "https://www.meistertask.com/app/dashboard";
-    public String userName = "rajesh.teppala@expleogroup.com";
+    public String baseURL = readConfig.baseURL;
+    public String userName = readConfig.userName;
+    public String password = readConfig.password;
     public WebDriver  driver;
     public WebActions actions = new Actions();
 

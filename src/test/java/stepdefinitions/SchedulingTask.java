@@ -13,7 +13,6 @@ import pagefactory.OpenTasksPage;
 import pagefactory.SchedulingTaskPage;
 import utils.BaseClass;
 import java.time.Duration;
-import java.util.Objects;
 
 public class SchedulingTask{
 
@@ -42,7 +41,7 @@ public class SchedulingTask{
 
     @And("User enters the password")
     public void enterPassword() {
-        loginPage.enterPassword("Aviva17#");
+        loginPage.enterPassword(baseClass.password);
     }
 
     @And("Clicks on the login button")

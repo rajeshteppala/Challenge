@@ -1,10 +1,5 @@
 Feature: Task scheduling
 
-  #Add unit test
-  #Add e2e test
-  #Add integrate test
-  #Add these snippets in PPT
-
     Background: Login the application
       Given User navigates to the application
       When User enters the username

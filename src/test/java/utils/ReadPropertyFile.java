@@ -1,46 +1,45 @@
 package utils;
 
-import java.io.File;
+import org.openqa.selenium.NoSuchElementException;
+
 import java.io.FileInputStream;
+import java.io.IOException;
 import java.util.Properties;
+import java.util.logging.Logger;
 
 public class ReadPropertyFile {
 
-    Properties propertyFile;
-    FileInputStream fileDate;
+    Logger logger = Logger.getLogger(ReadPropertyFile.class.getName());
+    public String baseURL;
+    public String userName;
+    public String password;
 
     public ReadPropertyFile() {
-        File src = new File("./config/config.properties");
+        Properties properties = new Properties();
+        FileInputStream fileInputStream = null;
 
         try {
-            fileDate = new FileInputStream(src);
-            propertyFile = new Properties();
-            propertyFile.load(fileDate);
-        } catch (Exception e) {
-            System.out.println(e.getMessage());
+            fileInputStream = new FileInputStream("./config//config.properties");
+            properties.load(fileInputStream);
+
+            // Get a specific property
+             baseURL = properties.getProperty("baseUrl");
+             userName = properties.getProperty("userName");
+             password = properties.getProperty("password");
+
+            logger.info("The base URL: " + baseURL);
+            logger.info("Login username: " + userName);
+            logger.info("Login password: " + password);
+        } catch (IOException e) {
+            throw new NoSuchElementException("Issue in reading the value from property file");
         } finally {
-            if (null != fileDate)
-            {
-                try
-                {
-                    fileDate.close();
-                }
-                catch (Exception e)
-                {
+            if (fileInputStream != null) {
+                try {
+                    fileInputStream.close(); // Close the file
+                } catch (IOException e) {
                     e.printStackTrace();
                 }
             }
         }
-    }
-
-    public String getApplicationURL() {
-        String url = propertyFile.getProperty("baseUrl");
-        System.out.println(url);
-        return url;
-    }
-
-    public String userName() {
-        String driverPath = propertyFile.getProperty("userName");
-        return driverPath;
     }
 }
