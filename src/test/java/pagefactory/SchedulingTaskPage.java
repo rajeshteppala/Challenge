@@ -5,7 +5,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import stepdefinitions.BaseClass;
+import core.BaseClass;
 
 public class SchedulingTaskPage extends BaseClass {
 

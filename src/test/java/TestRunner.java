@@ -3,7 +3,7 @@ import io.cucumber.junit.CucumberOptions;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.runner.RunWith;
-import stepdefinitions.BaseClass;
+import core.BaseClass;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
