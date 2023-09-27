@@ -25,9 +25,10 @@ Key components include:
    1. Install Java 11 SDK
    2. Install Maven 
    3. Set up the environmental variables
-   4. Set Editor like IntelliJ
-   5. Clone project from GitHub
-   6. Configuration
+   4. Clone project from GitHub
+   5. Set Editor like IntelliJ and open the cloned project
+   6. Fix the possible SDK issues
+   7. Configuration
       1. Enter the Credentials in config.properties file
    
 ### How to trigger the test
