@@ -32,7 +32,8 @@ Key components include:
       1. Enter the Credentials in config.properties file
    
 ### How to trigger the test
-Right click in TestRunner class and select TestRunner
+1. Add the scenario tag in Test Runner file
+2. Right click in TestRunner class and select TestRunner
 
 ![img.png](img.png)
 
